@@ -1,0 +1,6 @@
+/MinBias_TuneMonash13_13TeV-pythia8/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM
+/ReggeGribovPartonMC_13TeV-EPOS/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM
+/ReggeGribovPartonMC_13TeV-QGSJetII/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM
+/MinBias_TuneZ2star_13TeV-pythia6/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM
+/MinBias_TuneCUETP8M1_13TeV-pythia8/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM
+/MinBias_TuneEE5C_13TeV-herwigpp/RunIIWinter15GS-castor_MCRUN2_71_V0-v1/GEN-SIM

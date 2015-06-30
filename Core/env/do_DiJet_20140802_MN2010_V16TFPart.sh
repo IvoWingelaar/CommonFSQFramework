@@ -1,1 +1,0 @@
-export SmallXAnaVersion="CommonFSQFramework.Core.samples.Samples_DiJet_20140802_MN2010_V16TFPart"

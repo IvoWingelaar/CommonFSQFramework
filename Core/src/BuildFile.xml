@@ -9,6 +9,16 @@
 <use name="DataFormats/PatCandidates"/>
 <use name="JetMETCorrections/Objects"/>
 <use name="CondFormats/JetMETObjects"/>
+<use name="CondFormats/CastorObjects"/>
+<use name="CondFormats/DataRecord"/>
+<use name="DataFormats/Common"/>
+<use name="DataFormats/HcalRecHit"/>
+<use name="DataFormats/HcalDetId"/>
+<use name="DataFormats/Luminosity"/>
+<use name="Geometry/CaloGeometry"/>
+<use name="CalibFormats/HcalObjects"/>
+<use name="Geometry/Records"/>
+<use name="DataFormats/GeometryVector"/>
 <export>
    <lib name="1"/>
 </export>

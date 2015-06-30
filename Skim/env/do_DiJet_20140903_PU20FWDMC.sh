@@ -1,0 +1,1 @@
+export SmallXAnaVersion="CommonFSQFramework.Skim.Samples_DiJet_20140903_PU20FWDMC"
