@@ -6,7 +6,7 @@ template='''#!/usr/bin/env python
 import CommonFSQFramework.Core.ExampleProofReader
 
 # import all your getters here
-from  CommonFSQFramework.Core.GenParticlesGetter import GenParticlesGetter
+from CommonFSQFramework.Core.GenParticlesGetter import GenParticlesGetter
 
 import sys, os, time
 sys.path.append(os.path.dirname(__file__))
@@ -24,24 +24,24 @@ class XXXXX(CommonFSQFramework.Core.ExampleProofReader.ExampleProofReader):
         # define all your histograms
         self.hist = {}
         self.hist["numGenParticles"] =  ROOT.TH1F("numGenParticles",   "numGenParticles",  100, -0.5, 99.5)
-	
-	# define and initialize your getters
-	self.genparts = GenParticlesGetter("genParticles")
-        
-	# add error treatment and add histograms to output
-	for h in self.hist:
+
+        # define and initialize your getters
+        self.genparts = GenParticlesGetter("genParticles")
+
+        # add error treatment and add histograms to output
+        for h in self.hist:
             self.hist[h].Sumw2()
             self.GetOutputList().Add(self.hist[h])
 
     def analyze(self):
         weight = 1
-	
-	# fetch all info with the getters for this event
-	self.genparts.newEvent(self.fChain)
-	
-	# start making your histograms here...
-	
-	# fill gen histos
+
+        # fetch all info with the getters for this event
+        self.genparts.newEvent(self.fChain)
+
+        # start making your histograms here...
+
+        # fill gen histos
         numgen = 0
         for genpart in self.genparts.get():
             genpartp4 = genpart.p4 # get fourvector
@@ -53,11 +53,9 @@ class XXXXX(CommonFSQFramework.Core.ExampleProofReader.ExampleProofReader):
                 #self.hist["pdgIDGenParticles"].Fill(genpart.pdg, weight)
 
         self.hist["numGenParticles"].Fill(numgen, weight)
-        
-	
+
         #print self.maxEta # see slaveParams below
-	
-	
+
         return 1
 
     # this function will be executed after all events are processed, on each worker node separately
@@ -67,12 +65,12 @@ class XXXXX(CommonFSQFramework.Core.ExampleProofReader.ExampleProofReader):
         print "  applying norm", normFactor
         for h in self.hist:
             self.hist[h].Scale(normFactor)
-	   
+
     # this function will be executed after all events are processed, and after the results of all workers are merged/added
-    # use it to e.g. correct mean values in histograms etc. for the number of workers that you used	   
+    # use it to e.g. correct mean values in histograms etc. for the number of workers that you used
     def finalizeWhenMerged(self):
-        print "Final calculations after merging workers..."	   
-	   
+        print "Final calculations after merging workers..."
+
 
 if __name__ == "__main__":
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)
@@ -105,7 +103,7 @@ if __name__ == "__main__":
            sampleList=sampleList,
            maxFilesMC = maxFilesMC,
            maxFilesData = maxFilesData,
-	   maxNevents = maxNevents,
+	       maxNevents = maxNevents,
            nWorkers=nWorkers,
            outFile = "plotsXXXXX.root" )
 '''
